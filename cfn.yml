@@ -10,7 +10,7 @@ MyWebServer:
       InstanceType: t2.micro
       KeyName: firstkey
       SecurityGroupIds: 
-        - !Ref Mysecgrp
+        - !Ref MySecGrp
       Tags: 
         - Key: Name
           Value: !Sub Osvaldo ${AWS::StackName}
@@ -45,7 +45,7 @@ MySecGrp:
 
 Outputs:
   WebSiteURL:
-    Description: This output gives the URL of EC2:
+    Description:This output gives the URL of EC2:
     Value: !Sub
       - http://ec2-54-91-117-159.compute-1.amazonaws.com
       - PublicAddress: !GetAtt MyWebServer.PublicDnsName
