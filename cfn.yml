@@ -29,7 +29,7 @@ MyWebServer:
             systemctl start httpd
             systemctl enable httpd
 
-  MySecGrp:
+MySecGrp:
     Type: AWS::EC2::SecurityGroup
     Properties:
       GroupDescription: ssh and http # Required
